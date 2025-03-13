@@ -1,0 +1,37 @@
+body {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+    padding: 12px;
+    background: linear-gradient(to right, #dbd65c, #5614b0);
+    box-shadow: 0 0 20px #dbd65c, 0 0 40px #5614b0;
+    animation: glowPulse 1.5s infinite alternate, borderGlow 2s linear infinite;
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 15px #dbd65c, 0 0 30px #5614b0;
+    }
+    100% {
+      box-shadow: 0 0 25px #dbd65c, 0 0 50px #5614b0;
+    }
+  }
+  
+  @keyframes borderGlow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
